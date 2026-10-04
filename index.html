@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="昭和のパチンコ店をのぞく、コードだけで作られた動く3D箱庭。" />
+    <title>ニューハコニワ — 昭和のパチンコ店</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='6' y='3' width='52' height='58' rx='12' fill='%23b5372d'/%3E%3Ccircle cx='32' cy='28' r='18' fill='%23f6e9c5'/%3E%3Ctext x='32' y='37' text-anchor='middle' font-size='25' font-family='serif' fill='%23b5372d'%3E7%3C/text%3E%3Cpath d='M18 51h28' stroke='%23f6e9c5' stroke-width='5'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <main id="app">
+      <div id="world" aria-label="昭和のパチンコ店の3D箱庭。ドラッグで回転、ホイールで拡大縮小。"></div>
+      <header class="masthead">
+        <div class="eyebrow"><span class="red-line"></span> HAKONIWA COLLECTION <span class="edition">02</span></div>
+        <h1>ニューハコニワ<span class="seal">開店</span></h1>
+        <p>昭和のパチンコ店 <span class="divider">/</span> あの頃の、いつもの一日。</p>
+      </header>
+      <aside class="place"><span>とある町の、小さな娯楽場</span><strong>昭和 六十三年</strong><span class="open"><i></i> 本日も営業中</span></aside>
+      <div id="loading" role="status">箱庭を準備しています<span>•••</span></div>
+      <section class="view-label" aria-live="polite"><span id="view-kicker">DIORAMA VIEW</span><strong id="view-title">いつもの風景</strong><span id="view-description">小さな店の、大きなにぎわい。</span></section>
+      <div class="toolbar-wrap">
+        <div class="toolbar" role="group" aria-label="箱庭の操作">
+          <button id="overview" class="selected" title="箱庭の全景に戻る（Esc）"><span class="icon">⌂</span><span>箱庭</span></button>
+          <span class="toolbar-divider"></span>
+          <button id="person" title="次の人の目線へ（V）"><span class="icon people-icon">♙</span><span>人の目線へ</span><span class="key">V</span></button>
+          <button id="rotate" aria-pressed="false" title="全景を自動で回転"><span class="icon">↻</span><span>自動回転</span></button>
+          <button id="pause" aria-pressed="false" title="動きを一時停止（Space）"><span class="icon" id="pause-icon">Ⅱ</span><span id="pause-text">一時停止</span></button>
+        </div>
+        <p id="gesture-hint">ドラッグで回転 <span>·</span> スクロールで拡大 <span>·</span> V で目線切替</p>
+      </div>
+      <aside class="floor-note"><span class="live-dot"></span><span id="live-count">18台の、小さな物語</span><span class="floor-number">01 — 日常</span></aside>
+      <div id="error" hidden role="alert">3Dの表示を開始できませんでした。WebGL対応のブラウザーで開き直してください。</div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

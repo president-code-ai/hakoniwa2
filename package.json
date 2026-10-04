@@ -1,0 +1,9 @@
+{
+  "name": "hakoniwa2",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite --configLoader native --host 127.0.0.1", "build": "vite build --configLoader native", "preview": "vite preview --configLoader native --host 127.0.0.1", "test": "node tests/browser.mjs" },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "vite": "7.1.7", "playwright-core": "1.55.1" }
+}

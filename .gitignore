@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.browser-profile/
+*.log
+.npm-cache/
+.vite/
+
+artifacts/
+dist-pages/
+.env
+.env.*
+!.env.example
