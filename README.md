@@ -46,3 +46,7 @@ PCとiPhoneを同じルーターに接続し、PCで `Open-Hakoniwa-iPhone.cmd` 
 `main` ブランチへのpushでGitHub Actionsがビルドし、`dist/` だけをGitHub Pagesに配信します。公開サイトはGitHubから配信されるので、このPCの起動や家庭内Wi-Fiへの接続は不要です。
 
 公開用のビルドでは `GITHUB_PAGES=true` によりパスを `/hakoniwa2/` に設定します。通常のローカル起動は従来どおり `/` を使います。ログ、テスト画像、依存パッケージ、環境変数ファイルはGit管理の対象外です。
+
+## Node.jsのバージョン
+
+Node.js 22.23.4以降の22系を使用します。`.nvmrc`は22.23.4を指定しています。nvm-windowsではこのファイルだけで自動切り替えされないため、`node --version`で実際の版を確認してください。2026年10月21日のセキュリティ修正を含む版が必要です。
